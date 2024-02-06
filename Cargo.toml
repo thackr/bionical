@@ -1,6 +1,19 @@
 [package]
 name = "bionical"
 version = "0.1.0"
+description = "bionic reading with Rust to help improve speed, focus and comprehension 📚."
+readme = "README.md"
 edition = "2021"
+exclude = [".github", "*.log", "Dockerfile"]
+keywords = ["tui", "terminal", "reading", "reader", "cli", "utility", "accessibility", "productivity", "fast", "focus"]
+
+[lints.rust]
+unsafe_code = "forbid"
+# unused = "allow"
 
 [dependencies]
+ansi_term = "0.12.1"
+regex = "1.6.0"
+unicode-segmentation = "1.9.0"
+clap = { version = "3.2.8", features = ["derive"] }
+atty = "0.2.14"
